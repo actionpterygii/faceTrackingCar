@@ -102,7 +102,6 @@ def CD(TIME):
 def SWC1():
 	global SPEED
 	global TIME
-	global timer
 	global kit
 	GPIO.setmode(GPIO.BCM)
 	GPIO.setup(port1, GPIO.IN, pull_up_down = GPIO.PUD_UP)
@@ -133,7 +132,6 @@ def SWC1():
 				LH(SPEED-10)
 				RH(SPEED) 
 			LCD("1syu")
-			#cv2.imshow('im',im)
 			RP = RP + 1
 			x = 317
 			LCD("%d" %RP)
@@ -202,7 +200,7 @@ def SW6():
 		time.sleep(1)
 		initLCD()
 		sys.exit(0)
-		#os.system("sudo shutdown -h now")
+		os.system("sudo shutdown -h now")
 		
 
 if __name__ == '__main__':
